@@ -1,0 +1,654 @@
+
+/* 字體 */
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?5bloke');
+    src:  url('../fonts/icomoon.eot?5bloke#iefix') format('embedded-opentype'),
+      url('../fonts/icomoon.ttf?5bloke') format('truetype'),
+      url('../fonts/icomoon.woff?5bloke') format('woff'),
+      url('../fonts/icomoon.svg?5bloke#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+.the_top{
+    margin: 0 auto;
+    width: 1280px;
+    height: 30px;
+    background-color: rgb(253, 80, 9);
+    line-height: 30px;
+    text-align: center;
+}
+.the_top a{
+    color: white;
+}
+.the_top i{
+    color: white;
+}
+.w{
+    width: 1226px;
+    margin: 0 auto;
+}
+.shortcut{
+    margin: 0 auto;
+    width: 1280px;
+    height: 40px;
+    background-color: #212121;
+}
+.shortcut ul li a:hover{
+    color: white;
+    transition: .3s all;
+}
+.shortcut .fr ul li a:hover{
+    color: white;
+    transition: .3s all;
+}
+/* 導航欄左側 */
+.shortcut .fl ul{
+    margin-left: 20px;
+}
+.shortcut .fl ul li{
+    float: left;
+    line-height: 40px;
+}
+.shortcut ul li a{
+    color: #aeaeae;
+}
+.shortcut .fl ul li:nth-child(even){
+    margin: 13px 20px;
+    width: 1px;
+    height: 12px;
+    background-color: #aeaeae;
+}
+/* 導航欄右側 */
+.shortcut .fr ul{
+    margin-right: 20px;
+}
+.shortcut .fr ul li{
+    float: right;
+    line-height: 40px;
+}
+.shortcut .fr ul li a{
+    color: #aeaeae;
+}
+.shortcut .fr ul li:nth-child(even){
+    margin: 13px 20px;
+    width: 1px;
+    height: 12px;
+    background-color: #aeaeae;
+}
+.arrow_icon::before{
+    content: '\e93a';
+    font-family: 'icomoon';
+}
+.arrow_icon::after{
+    content: '(0)';
+    font-family: 'icomoon';
+}
+.shortcut .fr .arrow_icon:hover{
+    color: rgb(240, 129, 71);
+    transition: .3s all;
+}
+/* nav start */
+.nav{
+    position: relative;
+    height: 100px;
+}
+.nav img{
+    float: left;
+}
+#logo1{
+    float: left;
+    margin-top: 20px;
+    margin-right: 50px;
+}
+#logo2{
+    float: left;
+    margin-top: 10px;
+    margin-right: 50px;
+}
+.nav_li{
+    display: block;
+    float: left;
+    margin-right: 35px;
+    line-height: 100px;
+}
+.nav_li a:hover{
+    transition: color .4s ease;
+    color: orange;
+    z-index: 1;
+}
+.nav_li a{
+    color: #212121;
+    font-size: 16px;
+    font-weight: 700;
+}
+.nav_li ul{
+    float: left;
+}
+.nav input{
+    text-indent: 1em;
+    outline: none;
+    font-size: 16px;
+    border: 1px solid gray;
+    float: right;
+    height: 48px;
+    width: 247px;
+    margin-left: 55px;
+    margin-top: 25px;
+}
+.nav button{
+    position: absolute;
+    top: 28px;
+    width: 50px;
+    right: 0px;
+    float: right;
+    height: 50px;
+    border: none;
+    border-left: 1px solid gray;
+    background: none;
+    outline: none;
+}
+.nav button::after{
+    font-family: 'icomoon';
+    content: '\e986';
+    font-size: 20px;
+}
+.nav button:hover{
+    transition: color .4s ease;
+    background-color: rgb(236, 88, 41);
+    color: white;
+    border: none;
+}
+.show{
+    display: none;
+    position: absolute;
+    border-top: 1px solid rgb(224, 224, 224);
+    border-bottom: 1px solid rgb(224, 224, 224);
+    background-color: rgb(255, 255, 255);
+    left: 0px;
+    top: 90px;
+    width: 1226px;
+    height: 230px;
+    z-index: 100;
+}
+.phone{
+    text-align: center;
+    float: left;
+    margin-left: 50px;
+    margin-top: 25px;
+}
+.phone p{
+    position: absolute;
+    top:140px;
+    margin-left: 20px;
+    text-align: center;
+}
+/* content start */
+.content{
+    position: relative;
+    height: 460px;
+    /* background-image: url(../images/background4.jpg); */
+}
+/* 輪播圖的兩個按鈕開始 */
+.content button{
+    color: rgb(213, 210, 209);
+    position: absolute;
+    border: none;
+    background-color: transparent;
+    font-size: 50px;
+    top: 175px;
+    display: block;
+    width: 40px;
+    height: 68px;
+    line-height: 68px;
+}
+.prev{
+    left: 233px;
+}
+.next{
+    right: 0px;
+}
+.content button:hover{
+    background-color: rgb(119, 120, 123);
+    color: rgb(216, 216, 216);
+    display: block;
+}
+.content_left{
+    float: left;
+    position: absolute;
+    top: 1px;
+    height: 459px;
+    width: 234px;
+    background-color: rgba(0, 0, 0, .6);
+}
+.content img{
+    z-index: -20;
+}
+.dot{
+    position: absolute;
+    bottom: 20px;
+    right: 60px;
+}
+.dot li{
+    float: left;
+    padding: 2px;
+}
+.dot li::after{
+    font-family: 'icomoon';
+    content: '\eabe';
+}
+.red_point{
+    color: white;
+}
+.content_left .product_ul{
+    position: relative;
+    padding-top: 20px;
+}
+.content_left .product_ul .product_li{
+    height: 42px;
+    line-height: 42px;
+}
+.content_left .product_li:hover{
+    background-color: rgb(238, 112, 46);
+}
+.content_left .product_li a{
+    color: white;
+    font-size: 14px;
+    padding-left: 30px;
+}
+.content_left .product_li>a::after{
+    position: absolute;
+    right: 20px;
+    font-family: 'icomoon';
+    content: '\ea50';
+    font-size: 20px;
+}
+.content_left .last_product_li>a::after{
+    content: none;
+}
+.pack{
+    display: none;
+}
+.product_inner{
+    position: absolute;
+    left: 234px;
+    top: 0px;
+    height: 460px;
+    width: 265px;
+    background-color: white;
+    z-index: 101;
+}
+.product_inner2{
+    position: absolute;
+    left: 499px;
+    top: 0px;
+    height: 460px;
+    width: 265px;
+    background-color: white;
+    z-index: 101;
+}
+.product_inner a , .product_inner2 a{
+    position: relative;
+    line-height: 46px;
+    display: block;
+}
+.product_inner img , .product_inner2 img{
+    width: 60px;
+}
+.product_inner span ,.product_inner2 span{
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 100px;
+    color: black;
+    font-size: 16px;
+}
+.product_li .product_inner li a:hover span{
+    color: rgb(238, 112, 46);
+    transition: color .3s;
+}
+.product_li .product_inner2 li a:hover span{
+    color: rgb(238, 112, 46);
+    transition: .3s;
+}
+.box{
+    padding-top: 14px;
+}
+.box ul li{
+    float: left;
+    padding-right: 14px;
+}
+#box_last{
+    padding-right: 0;
+}
+.long_img a{
+    float: left;
+    display: block;
+    width: 1226px;
+    height: 120px;
+    margin-top: 17px;
+}
+.long_img a:hover{
+    box-shadow: 3px 3px 30px rgb(107, 104, 104);
+}
+.h2{
+    line-height: 58px;
+}
+.h2 span{
+    color: black;
+    font-size: 22px;
+    font-weight: 200;
+}
+.bigbox{
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 40px;
+}
+.bigbox ul{
+    margin: 0 auto;
+    width: 3840px;
+    overflow: hidden;
+}
+.bigbox ul li{
+    float: left;
+    margin-right: 14px;
+    text-align: center;
+    height: 338px;
+    margin-left: 0;
+}
+.middle_ul li{
+    position: relative;
+    float: left;
+    margin-right: 14px;
+    text-align: center;
+    background-color: white;
+    width: 234px;
+    height: 300px;
+    padding-top: 39px;
+    margin-left: 0;
+    margin-bottom: 50px;
+}
+.middle ul li i{
+    position: absolute;
+    top: 0;
+    color: white;
+    font-style: normal;
+    display: block;
+    text-align: center;
+    line-height: 22px;
+    width: 45px;
+    height: 20px;
+}
+#i1{
+    background-color:rgb(212, 72, 62)
+}
+#i2{
+    background-color:rgb(81, 163, 154)
+}
+#i3{
+    background-color:rgb(235, 172, 60)
+}
+#i4{
+    background-color:rgb(155, 192, 89)
+}
+#i5{
+    background-color:rgb(70, 150, 236)
+}
+#the_last_bestselling{
+    margin-right: 0px;
+}
+.best_selling ul li:hover{
+    box-shadow: 3px 3px 60px rgba(0, 0, 0, .1);
+}
+.product_box{
+    position: relative;
+    width: 234px;
+    height: 338px;
+    border-top: 1px solid black;
+    background-color: rgb(250, 250, 250);
+}
+.border_orange{
+    border-top: 1px solid rgb(241, 154, 9);
+}
+.border_green{
+    border-top: 1px solid rgb(155, 192, 89);
+}
+.border_blue{
+    border-top: 1px solid rgb(70, 150, 236);
+}
+.border_red{
+    border-top: 1px solid rgb(212, 72, 62);
+}
+.border_green_blue{
+    border-top: 1px solid rgb(81, 163, 154);
+}
+.product_p img{
+    position: absolute;
+    top: 40px;
+    left: 37px;
+}
+.product_h3{
+    margin-top: 230px;
+}
+.product_h3_2{
+    margin-top: 30px;
+}
+.product_h3 a{
+    font-size: 14px;
+    color: #212121;
+    font-weight: 200;
+}
+.product_h3_2 .product_a{
+    font-size: 14px;
+    color: #212121;
+    font-weight: 200;
+}
+.price{
+    margin-top: 38px;
+    color: rgb(241, 168, 131);
+}
+.price_2{
+    margin-top: 8px;
+    color: rgb(241, 168, 131);
+}
+/*
+清除浮動
+.bigbox::before {
+    content: " ";
+    display: table;
+    clear: both;
+} */
+/* 15張產品圖結束 */
+.middle{
+    /* 一般來說不指定高度，藉由添加盒子撐開
+    此處先添加方便測量，日後再刪除
+    要記得清除浮動 */
+    margin: 0 auto;
+    width: 1280px;
+    background-color: rgb(245, 245, 245);
+    height: 1200px;
+}
+.middle::before {
+    content: '';
+    display: table;
+    clear: both;
+} 
+.middle_ul2{
+    height: 330px;
+}
+.middle_ul2 li{
+    position: relative;
+    float: left;
+    margin-right: 14px;
+    text-align: center;
+    background-color: white;
+    width: 234px;
+    height: 300px;
+}
+.middle_ul2 li:hover{
+    box-shadow: 3px 3px 60px rgba(0, 0, 0, .1);
+}
+.middle_ul2 li img{
+    padding-top: 30px;
+}
+/* 左列第一張圖都添加此樣式 */
+.middle_ul2 li .first_pic{
+    width: 100%;
+    position: absolute;
+    top: -30px;
+    left: 0px;
+}
+.middle_ul2 .the_last{
+    margin-right: 0px;
+}
+.middle_ul3{
+    position: absolute;
+    top: 2400px;
+    left: 26px;
+}
+.footer_ad div:hover{
+    color: rgb(242, 142, 98);
+}
+.footer_ad div:hover span{
+    color: rgb(242, 142, 98);
+}
+.footer_ad div{
+    float: left;
+    margin: 15px 60px;
+}
+.footer_ad .footer_1::before{
+    position: relative;
+    top: 22px;
+    font-family: 'icomoon';
+    content: '\e93b';
+    font-size: 40px;
+}
+.footer_ad .footer_2::before{
+    position: relative;
+    top: 22px;
+    font-family: 'icomoon';
+    content: '\e902';
+    font-size: 40px;
+}
+.footer_ad .footer_3::before{
+    position: relative;
+    top: 22px;
+    font-family: 'icomoon';
+    content: '\e903';
+    font-size: 40px;
+}
+.td{
+    padding-left: 45px;
+}
+.footer_ad .line{
+    width: 2px;
+    height: 40px;
+    background-color: rgb(215, 215, 215);
+    margin-top: 40px;
+}
+.footer_ad .icon span{
+    display: inline-block;
+    margin-top: 35px;
+    margin-left: -100px;
+    color:rgb(120, 120, 120)
+}
+.footer_ad .icon span:hover{
+    color: rgb(66, 66, 66);
+}
+.icon_a::after{
+    font-family: 'icomoon';
+    content: '\ea90';
+    padding-left: 10px;
+    font-size: 20px;
+}
+.icon_b::after{
+    font-family: 'icomoon';
+    content: '\ea92';
+    padding-left: 10px;
+    font-size: 20px;
+}
+.icon_c::after{
+    font-family: 'icomoon';
+    content: '\ea93';
+    padding-left: 10px;
+    font-size: 20px;
+}
+.icon_d::after{
+    font-family: 'icomoon';
+    content: '\ea9e';
+    padding-left: 10px;
+    font-size: 20px;
+}
+.footer{
+    margin: 0 auto;
+    margin-top: 120px;
+    background-color: rgb(33, 33, 33);
+    height: 340px;
+    width: 1280px;
+    font-weight: 100;
+    border-bottom: 1px solid gray
+}
+.footer_ad{
+    width: 1280px;
+    margin: 0 auto;
+}
+.footer::before{
+    content: " ";
+    display: table;
+}
+.footer dl {
+    padding-top: 30px;
+    height: 300px;
+    float: left;
+}
+.footer dl dt{
+    width: 155px;
+    color: rgb(252, 252, 252);
+    padding:20px 20px ;
+}
+.footer dl dd{
+    color: rgb(252, 252, 252);
+    padding-top: 10px;
+    padding-left: 25px;
+}
+.footer_box{
+    text-align: center;
+    position: relative;
+    right: -1000px;
+    top: -300px;
+    width: 200px;
+    height: 110px;
+}
+.footer_box h3{
+    color: rgb(252, 252, 252);
+    font-size: 30px;
+}
+.footer_box p{
+    font-size: 12px;
+    color: rgb(252, 252, 252);
+    padding: 10px 0px;
+}
+.footer_box button{
+    background-color: transparent;
+    color: rgb(252, 252, 252);
+    height: 30px;
+    width: 130px;
+    font-weight: 100;
+
+}
+.bottom{
+    margin: 0 auto;
+    height: 100px;
+    width: 1280px;
+    background-color: rgb(33, 33, 33);
+}
+.bottom p{
+    line-height: 100px;
+    text-indent: 2em;
+    color: rgb(252, 252, 252);
+    font-weight: 200;
+}
+
+
+

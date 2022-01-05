@@ -1,0 +1,842 @@
+<!-- 重點提醒
+1.logo部分要注重規範，要做seo優化
+2.此版有板心 w:1226px
+3.全部完成後再加上效果
+-->
+<!-- 2021/9/28-10/1完成。
+網頁首頁，裡面包含前端最基本的技巧，盒子模型，
+佈局，浮動，以及為輪播圖註冊點擊事件，添加計時
+器，以及鼠標經過的變色效果。 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="手機，平板，家電，充電器，耳機，路由器">
+    <meta name="content" content="我們提供最高cp值的產品，歡迎參觀選購">
+    <title>小米台灣站</title>
+    <!-- ico圖標 -->
+    <link rel="shortcut icon" href="favicon.ico">
+    <!-- css -->
+    <link rel="stylesheet" href="css/base.css">
+    <!-- css -->
+    <link rel="stylesheet" href="css/common.css">
+    <!-- 插入js -->
+    <script src="js/index.js"></script>
+</head>
+
+<body>
+    <!-- test -->
+    <!-- <button id="start">start</button>
+    <button id="stop">stop</button> -->
+    <!-- 可關閉廣告欄 -->
+    <header class="the_top">
+        <a href="#">小米防疫&中秋節中獎公告</a><i id="iii">X</i>
+        <!-- X添加事件，點擊後hidden this box -->
+    </header>
+    <!-- top start -->
+    <header class="shortcut">
+        <div class="fl">
+            <ul>
+                <li><a href="javascript:;">小米台灣官網</a></li>
+                <li><a href="javascript:;"></a></li>
+                <li><a href="javascript:;">MIUI</a></li>
+                <li><a href="javascript:;"></a></li>
+                <li><a href="javascript:;">下載小米商城 APP</a></li>
+                <li><a href="javascript:;"></a></li>
+                <li><a href="javascript:;">小米積分中心</a></li>
+            </ul>
+        </div>
+        <div class="fr">
+            <ul>
+                <li><a href="javascript:;" class="arrow_icon">&nbsp;&nbsp;購物車&nbsp;</a></li>
+                <li><a href="javascript:;"></a></li>
+                <li><a href="javascript:;">註冊</a></li>
+                <li><a href="javascript:;"></a></li>
+                <li><a href="javascript:;">登入</a></li>
+            </ul>
+        </div>
+    </header>
+    <!-- nav start -->
+    <nav class="nav w">
+        <!-- 缺一個js輪動效果圖 之後補上 -->
+        <img src="images/mi.logo.jpeg" alt="" width="60px" id="logo1">
+        <img src="https://i01.appmifile.com/webfile/globalweb/picture/icon0518-1.gif" alt="" id="logo2">
+        <ul>
+            <li class="nav_li"><a href="javascript:;">Xiaomi手機</a>
+                <!-- 加盒子，鼠標經過就出現 -->
+                <div class="show">
+                    <div class="phone">
+                        <a href="javascript:;">
+                            <img src="images/phone1.png" alt="">
+                            <br>
+                            <p>Xiaomi 11 Lite 5G NE</p>
+                        </a>
+                        <span class="price">NT$10,999起</span>
+                    </div>
+                    <div class="phone">
+                        <a href="javascript:;">
+                            <img src="images/phone2.png" alt="">
+                            <br>
+                            <p>小米11 5G</p>
+                        </a>
+                        <span class="price">NT$21,999起</span>
+                    </div>
+                </div>
+            </li>
+            <li class="nav_li"><a href="javascript:;">Redmi手機</a>
+                <!-- 加盒子，鼠標經過就出現 -->
+                <div class="show">
+                    <div class="phone">
+                        <a href="javascript:;">
+                            <img src="images/phone3.png" alt="">
+                            <br>
+                            <p>Redmi Note 10 Pro</p>
+                        </a>
+                        <span class="price">NT$8,499起</span>
+                    </div>
+                    <div class="phone">
+                        <a href="javascript:;">
+                            <img src="images/phone4.png" alt="">
+                            <br>
+                            <p>Redmi Note 10 5G</p>
+                        </a>
+                        <span class="price">NT$6,999起</span>
+                    </div>
+                    <div class="phone">
+                        <a href="javascript:;">
+                            <img src="images/phone5.png" alt="">
+                            <br>
+                            <p>Redmi Note 10 5G</p>
+                        </a>
+                        <span class="price">NT$6,999起</span>
+                    </div>
+                </div>
+            </li>
+            <li class="nav_li"><a href="javascript:;">POCO手機</a>
+                <div class="show">
+                    <div class="phone">
+                        <a href="javascript:;">
+                            <img src="images/phone6.png" alt="">
+                            <br>
+                            <p>POCO M3 Pro 5G</p>
+                        </a>
+                        <span class="price">NT$5,299起</span>
+                    </div>
+                    <div class="phone">
+                        <a href="javascript:;">
+                            <img src="images/phone7.png" alt="">
+                            <br>
+                            <p>POCO F3 5G</p>
+                        </a>
+                        <span class="price">NT$10,999起</span>
+                    </div>
+                    <div class="phone">
+                        <a href="javascript:;">
+                            <img src="images/phone8.png" alt="">
+                            <br>
+                            <p>POCO X3 Pro</p>
+                        </a>
+                        <span class="price">NT$7,499起</span>
+                    </div>
+                    <div class="phone">
+                        <a href="javascript:;">
+                            <img src="images/phone9.png" alt="">
+                            <br>
+                            <p>POCO M3</p>
+                        </a>
+                        <span class="price">NT$3,999起</span>
+                    </div>
+                </div>
+            </li>
+            <li class="nav_li"><a href="javascript:;">智慧家庭</a>
+                <div class="show">
+                    <div class="phone">
+                        <a href="javascript:;">
+                            <img src="images/phone1.png" alt="">
+                            <br>
+                            <p>Xiaomi 11 Lite 5G NE</p>
+                        </a>
+                        <span class="price">NT$10,999起</span>
+                    </div>
+                    <div class="phone">
+                        <a href="javascript:;">
+                            <img src="images/phone2.png" alt="">
+                            <br>
+                            <p>小米11 5G</p>
+                        </a>
+                        <span class="price">NT$21,999起</span>
+                    </div>
+                </div>
+            </li>
+            <li class="nav_li"><a href="javascript:;">智慧科技</a>
+                <div class="show">
+                    <div class="phone">
+                        <a href="javascript:;">
+                            <img src="images/phone6.png" alt="">
+                            <br>
+                            <p>POCO M3 Pro 5G</p>
+                        </a>
+                        <span class="price">NT$5,299起</span>
+                    </div>
+                    <div class="phone">
+                        <a href="javascript:;">
+                            <img src="images/phone7.png" alt="">
+                            <br>
+                            <p>POCO F3 5G</p>
+                        </a>
+                        <span class="price">NT$10,999起</span>
+                    </div>
+                    <div class="phone">
+                        <a href="javascript:;">
+                            <img src="images/phone8.png" alt="">
+                            <br>
+                            <p>POCO X3 Pro</p>
+                        </a>
+                        <span class="price">NT$7,499起</span>
+                    </div>
+                    <div class="phone">
+                        <a href="javascript:;">
+                            <img src="images/phone9.png" alt="">
+                            <br>
+                            <p>POCO M3</p>
+                        </a>
+                        <span class="price">NT$3,999起</span>
+                    </div>
+                </div>
+            </li>
+            <li class="nav_li"><a href="javascript:;">配件</a>
+                <div class="show">
+                    <div class="phone">
+                        <a href="javascript:;">
+                            <img src="images/phone3.png" alt="">
+                            <br>
+                            <p>Redmi Note 10 Pro</p>
+                        </a>
+                        <span class="price">NT$8,499起</span>
+                    </div>
+                    <div class="phone">
+                        <a href="javascript:;">
+                            <img src="images/phone4.png" alt="">
+                            <br>
+                            <p>Redmi Note 10 5G</p>
+                        </a>
+                        <span class="price">NT$6,999起</span>
+                    </div>
+                    <div class="phone">
+                        <a href="javascript:;">
+                            <img src="images/phone5.png" alt="">
+                            <br>
+                            <p>Redmi Note 10 5G</p>
+                        </a>
+                        <span class="price">NT$6,999起</span>
+                    </div>
+                </div>
+            </li>
+            <li class="nav_li"><a href="javascript:;">服務</a></li>
+        </ul>
+        <!-- 右側模塊開始 -->
+        <div class="nav_r">
+            <input type="text" placeholder="搜尋商品">
+            <button></button>
+        </div>
+
+    </nav>
+    <!-- content start -->
+    <div class="content w">
+        <!-- 輪播圖的兩個按鈕開始 -->
+        <button class="prev">&lt;</button>
+        <button class="next">&gt;</button>
+        <!-- 左邊 -->
+        <div class="content_left">
+            <ul class="product_ul">
+                <li class="product_li">
+                    <a href="javascript:;">手機
+                    </a>
+                    <!-- 放一個盒子把兩個ul包住等等一起隱藏 -->
+                    <div class="pack">
+                        <ul class="product_inner">
+                            <li><a href="javascript:;"><img src="images/nav_phone1.png" alt="">
+                                    <span>Xiaomi 11 Lite 5G NE</span></a></li>
+                            <li><a href="javascript:;"><img src="images/nav_phone2.png" alt="">
+                                    <span>小米 11 Lite 5G</span></a></li>
+                            <li><a href="javascript:"><img src="images/nav_phone3.png" alt="">
+                                    <span>小米 11 5G</span></a></li>
+                            <li><a href="javascript:;"><img src="images/nav_phone4.png" alt="">
+                                    <span>Redmi 10</span></a></li>
+                            <li><a href="javascript:;"><img src="images/nav_phone5.png" alt="">
+                                    <span>Redmi Note 10 Pro</span></a></li>
+                            <li><a href="javascript:;"><img src="images/nav_phone6.png" alt="">
+                                    <span>Redmi Note 10 5G</span></a></li>
+                        </ul>
+                        <ul class="product_inner2">
+                            <li><a href="javascript:;"><img src="images/nav_phone7.png" alt="">
+                                    <span>Redmi Note 10S</span></a></li>
+                            <li><a href="javascript:;"><img src="images/nav_phone8.png" alt="">
+                                    <span>POCO F3</span></a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="product_li"><a href="javascript:;">視聽娛樂</a>
+                    <div class="pack">
+                        <ul class="product_inner">
+                            <li><a href="javascript:;"><img src="images/tv1.png" alt="">
+                                    <span>小米智慧顯示器65型</span></a></li>
+                            <li><a href="javascript:;"><img src="images/tv2.png" alt="">
+                                    <span>小米智慧顯示器 55型</span></a></li>
+                            <li><a href="javascript:;"><img src="images/tv3.png" alt="">
+                                    <span>小米智慧顯示器 50型</span></a></li>
+                            <li><a href="javascript:;"><img src="images/tv4.png" alt="">
+                                    <span>電腦螢幕</span></a></li>
+                            <li><a href="javascript:;"><img src="images/tv5.png" alt="">
+                                    <span>Xiaomi Pad 5</span></a></li>
+                            <li><a href="javascript:;"><img src="images/tv6.png" alt="">
+                                    <span>投影機</span></a></li>
+                        </ul>
+                        <ul class="product_inner2">
+                            <li><a href="javascript:;"><img src="images/tv7.png" alt="">
+                                    <span>小米盒子S</span></a></li>
+                            <li><a href="javascript:;"><img src="images/tv8.png" alt="">
+                                    <span>小愛音箱</span></a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="product_li"><a href="javascript:;">智慧家電</a>
+                    <div class="pack">
+                        <ul class="product_inner">
+                            <li><a href="javascript:;"><img src="images/home1.png" alt="">
+                                    <span>掃拖機器人</span></a></li>
+                            <li><a href="javascript:;"><img src="images/home2.png" alt="">
+                                    <span>吸塵器</span></a></li>
+                            <li><a href="javascript:;"><img src="images/home3.png" alt="">
+                                    <span>空淨</span></a></li>
+                            <li><a href="javascript:;"><img src="images/home4.png" alt="">
+                                    <span>攝影機</span></a></li>
+                            <li><a href="javascript:;"><img src="images/home5.png" alt="">
+                                    <span>風扇</span></a></li>
+                            <li><a href="javascript:;"><img src="images/home6.png" alt="">
+                                    <span>燈具</span></a></li>
+                        </ul>
+                        <ul class="product_inner2">
+                            <li><a href="javascript:;"><img src="images/home7.png" alt="">
+                                    <span>電子鍋</span></a></li>
+                            <li><a href="javascript:;"><img src="images/home8.png" alt="">
+                                    <span>煮湯鍋</span></a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="product_li"><a href="javascript:;">旅行穿戴</a>
+                    <div class="pack">
+                        <ul class="product_inner">
+                            <li><a href="javascript:;"><img src="images/nav_phone1.png" alt="">
+                                    <span>Xiaomi 11 Lite 5G NE</span></a></li>
+                            <li><a href="javascript:;"><img src="images/nav_phone2.png" alt="">
+                                    <span>小米 11 Lite 5G</span></a></li>
+                            <li><a href="javascript:"><img src="images/nav_phone3.png" alt="">
+                                    <span>小米 11 5G</span></a></li>
+                            <li><a href="javascript:;"><img src="images/nav_phone4.png" alt="">
+                                    <span>Redmi 10</span></a></li>
+                            <li><a href="javascript:;"><img src="images/nav_phone5.png" alt="">
+                                    <span>Redmi Note 10 Pro</span></a></li>
+                            <li><a href="javascript:;"><img src="images/nav_phone6.png" alt="">
+                                    <span>Redmi Note 10 5G</span></a></li>
+                        </ul>
+                        <ul class="product_inner2">
+                            <li><a href="javascript:;"><img src="images/nav_phone7.png" alt="">
+                                    <span>Redmi Note 10S</span></a></li>
+                            <li><a href="javascript:;"><img src="images/nav_phone8.png" alt="">
+                                    <span>POCO F3</span></a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="product_li"><a href="javascript:;">智慧科技</a>
+                    <div class="pack">
+                        <ul class="product_inner">
+                            <li><a href="javascript:;"><img src="images/tv1.png" alt="">
+                                    <span>小米智慧顯示器65型</span></a></li>
+                            <li><a href="javascript:;"><img src="images/tv2.png" alt="">
+                                    <span>小米智慧顯示器55型</span></a></li>
+                            <li><a href="javascript:;"><img src="images/tv3.png" alt="">
+                                    <span>小米智慧顯示器50型</span></a></li>
+                            <li><a href="javascript:;"><img src="images/tv4.png" alt="">
+                                    <span>電腦螢幕</span></a></li>
+                            <li><a href="javascript:;"><img src="images/tv5.png" alt="">
+                                    <span>Xiaomi Pad 5</span></a></li>
+                            <li><a href="javascript:;"><img src="images/tv6.png" alt="">
+                                    <span>投影機</span></a></li>
+                        </ul>
+                        <ul class="product_inner2">
+                            <li><a href="javascript:;"><img src="images/tv7.png" alt="">
+                                    <span>小米盒子S</span></a></li>
+                            <li><a href="javascript:;"><img src="images/tv8.png" alt="">
+                                    <span>小愛音箱</span></a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="product_li"><a href="javascript:;">電源3C配件</a>
+                    <div class="pack">
+                        <ul class="product_inner">
+                            <li><a href="javascript:;"><img src="images/home1.png" alt="">
+                                    <span>掃拖機器人</span></a></li>
+                            <li><a href="javascript:;"><img src="images/home2.png" alt="">
+                                    <span>吸塵器</span></a></li>
+                            <li><a href="javascript:;"><img src="images/home3.png" alt="">
+                                    <span>空淨</span></a></li>
+                            <li><a href="javascript:;"><img src="images/home4.png" alt="">
+                                    <span>攝影機</span></a></li>
+                            <li><a href="javascript:;"><img src="images/home5.png" alt="">
+                                    <span>風扇</span></a></li>
+                            <li><a href="javascript:;"><img src="images/home6.png" alt="">
+                                    <span>燈具</span></a></li>
+                        </ul>
+                        <ul class="product_inner2">
+                            <li><a href="javascript:;"><img src="images/home7.png" alt="">
+                                    <span>電子鍋</span></a></li>
+                            <li><a href="javascript:;"><img src="images/home8.png" alt="">
+                                    <span>煮湯鍋</span></a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="product_li"><a href="javascript:;">耳機音箱</a>
+                    <div class="pack">
+                        <ul class="product_inner">
+                            <li><a href="javascript:;"><img src="images/nav_phone1.png" alt="">
+                                    <span>Xiaomi 11 Lite 5G NE</span></a></li>
+                            <li><a href="javascript:;"><img src="images/nav_phone2.png" alt="">
+                                    <span>小米 11 Lite 5G</span></a></li>
+                            <li><a href="javascript:"><img src="images/nav_phone3.png" alt="">
+                                    <span>小米 11 5G</span></a></li>
+                            <li><a href="javascript:;"><img src="images/nav_phone4.png" alt="">
+                                    <span>Redmi 10</span></a></li>
+                            <li><a href="javascript:;"><img src="images/nav_phone5.png" alt="">
+                                    <span>Redmi Note 10 Pro</span></a></li>
+                            <li><a href="javascript:;"><img src="images/nav_phone6.png" alt="">
+                                    <span>Redmi Note 10 5G</span></a></li>
+                        </ul>
+                        <ul class="product_inner2">
+                            <li><a href="javascript:;"><img src="images/nav_phone7.png" alt="">
+                                    <span>Redmi Note 10S</span></a></li>
+                            <li><a href="javascript:;"><img src="images/nav_phone8.png" alt="">
+                                    <span>POCO F3</span></a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="product_li"><a href="javascript:;">健康護理</a>
+                    <div class="pack">
+                        <ul class="product_inner">
+                            <li><a href="javascript:;"><img src="images/tv1.png" alt="">
+                                    <span>小米智慧顯示器65型</span></a></li>
+                            <li><a href="javascript:;"><img src="images/tv2.png" alt="">
+                                    <span>小米智慧顯示器 P1 55型</span></a></li>
+                            <li><a href="javascript:;"><img src="images/tv3.png" alt="">
+                                    <span>小米智慧顯示器 P1 50型</span></a></li>
+                            <li><a href="javascript:;"><img src="images/tv4.png" alt="">
+                                    <span>電腦螢幕</span></a></li>
+                            <li><a href="javascript:;"><img src="images/tv5.png" alt="">
+                                    <span>Xiaomi Pad 5</span></a></li>
+                            <li><a href="javascript:;"><img src="images/tv6.png" alt="">
+                                    <span>投影機</span></a></li>
+                        </ul>
+                        <ul class="product_inner2">
+                            <li><a href="javascript:;"><img src="images/tv7.png" alt="">
+                                    <span>小米盒子S</span></a></li>
+                            <li><a href="javascript:;"><img src="images/tv8.png" alt="">
+                                    <span>小愛音箱</span></a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="product_li"><a href="javascript:;">生活周邊</a>
+                    <div class="pack">
+                        <ul class="product_inner">
+                            <li><a href="javascript:;"><img src="images/home1.png" alt="">
+                                    <span>掃拖機器人</span></a></li>
+                            <li><a href="javascript:;"><img src="images/home2.png" alt="">
+                                    <span>吸塵器</span></a></li>
+                            <li><a href="javascript:;"><img src="images/home3.png" alt="">
+                                    <span>空淨</span></a></li>
+                            <li><a href="javascript:;"><img src="images/home4.png" alt="">
+                                    <span>攝影機</span></a></li>
+                            <li><a href="javascript:;"><img src="images/home5.png" alt="">
+                                    <span>風扇</span></a></li>
+                            <li><a href="javascript:;"><img src="images/home6.png" alt="">
+                                    <span>燈具</span></a></li>
+                        </ul>
+                        <ul class="product_inner2">
+                            <li><a href="javascript:;"><img src="images/home7.png" alt="">
+                                    <span>電子鍋</span></a></li>
+                            <li><a href="javascript:;"><img src="images/home8.png" alt="">
+                                    <span>煮湯鍋</span></a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="product_li last_product_li"><a href="javascript:;">全部配件分類</a></li>
+            </ul>
+        </div>
+        <!-- 右邊 -->
+        <div class="content_right"></div>
+        <img src="images/background1.jpg" alt="" id="pic">
+        <ul class="dot">
+            <li index="0" class="red_point"></li>
+            <li index="1"></li>
+            <li index="2"></li>
+            <li index="3"></li>
+            <li index="4"></li>
+            <li index="5"></li>
+            <li index="6"></li>
+            <li index="7"></li>
+            <li index="8"></li>
+            <li index="9"></li>
+        </ul>
+    </div>
+    <!-- 四個盒子開始 -->
+    <div class="box w">
+        <ul>
+            <li id="redmi_note10pro"><a href="javascript:;"><img src="images/a1.jpg" alt=""></a></li>
+            <li><a href="javascript:;"><img src="images/a2.jpg" alt=""></a></li>
+            <li><a href="javascript:;"><img src="images/a3.jpg" alt=""></a></li>
+            <li id="box_last"><a href="javascript:;"><img src="images/a4.jpg" alt=""></a></li>
+        </ul>
+    </div>
+    <!-- 中間長條 -->
+    <div class="long_img w">
+        <a href="javascript:;"><img src="images/longimg.jpeg" alt=""></a>
+        <a href="javascript:;" id="long_img_2"><img src="images/longimg2.jpeg" alt=""></a>
+    </div>
+    <h2 class="h2 w" style="margin-top: 490px;"><span>明星單品</span></h2>
+    <!-- 接續放商品盒子。
+    注意原版為長條圖，藉由JQuery動畫效果，
+    做出來後先overflow:hidden
+    準備一個大盒子包住15張圖片 -->
+    <div class="bigbox w">
+        <ul>
+            <li>
+                <!-- 之後用偽類選擇器更帥，這次先傳統作法
+                每張圖片都用定位固定位置 -->
+                <div class="product_box border_orange">
+                    <a href="javascript:;" class="product_p"><img src="images/product1.png" alt=""></a>
+                    <h3 class="product_h3">
+                        <a href="javascript:;" class="product_a">小米智慧顯示器 P1 55型</a>
+                    </h3>
+                    <p class="price">NT$ 17999</p>
+                </div>
+            </li>
+            <li>
+                <div class="product_box border_green">
+                    <a href="javascript:;" class="product_p"><img src="images/product2.png" alt=""></a>
+                    <h3 class="product_h3">
+                        <a href="javascript:;" class="product_a">米家無線吸塵器 G10</a>
+                    </h3>
+                    <p class="price">NT$ 7495</p>
+                </div>
+            </li>
+            <li>
+                <div class="product_box border_blue">
+                    <a href="javascript:;" class="product_p"><img src="images/product3.png" alt=""></a>
+                    <h3 class="product_h3">
+                        <a href="javascript:;" class="product_a">米家直流變頻電風扇 1X</a>
+                    </h3>
+                    <p class="price">NT$ 1945</p>
+                </div>
+            </li>
+            <li>
+                <div class="product_box border_red">
+                    <a href="javascript:;" class="product_p"><img src="images/product4.png" alt=""></a>
+                    <h3 class="product_h3">
+                        <a href="javascript:;" class="product_a">小米空氣淨化器 3</a>
+                    </h3>
+                    <p class="price">NT$ 4495</p>
+                </div>
+            </li>
+            <li>
+                <div class="product_box border_green_blue">
+                    <a href="javascript:;" class="product_p"><img src="images/product5.png" alt=""></a>
+                    <h3 class="product_h3">
+                        <a href="javascript:;" class="product_a">小米智慧攝影機 雲台版 2K</a>
+                    </h3>
+                    <p class="price">NT$ 1095</p>
+                </div>
+            </li>
+            <li>
+                <div class="product_box border_orange">
+                    <a href="javascript:;" class="product_p"><img src="images/product6.png" alt=""></a>
+                    <h3 class="product_h3">
+                        <a href="javascript:;" class="product_a">米家無線吸塵器 G9</a>
+                    </h3>
+                    <p class="price">NT$ 5495</p>
+                </div>
+            </li>
+            <li>
+                <div class="product_box border_green">
+                    <a href="javascript:;" class="product_p"><img src="images/product7.png" alt=""></a>
+                    <h3 class="product_h3">
+                        <a href="javascript:;" class="product_a">家空氣淨化器濾芯 抗菌版</a>
+                    </h3>
+                    <p class="price">NT$ 795</p>
+                </div>
+            </li>
+            <li>
+                <div class="product_box border_blue">
+                    <a href="javascript:;" class="product_p"><img src="images/product8.png" alt=""></a>
+                    <h3 class="product_h3">
+                        <a href="javascript:;" class="product_a">小米智慧攝影機 雲台版 2K Pro</a>
+                    </h3>
+                    <p class="price">NT$ 1345</p>
+                </div>
+            </li>
+            <li>
+                <div class="product_box border_red">
+                    <a href="javascript:;" class="product_p"><img src="images/product9.png" alt=""></a>
+                    <h3 class="product_h3">
+                        <a href="javascript:;" class="product_a">米家空氣淨化器 Pro</a>
+                    </h3>
+                    <p class="price">NT$ 6895</p>
+                </div>
+            </li>
+            <li>
+                <div class="product_box border_green_blue">
+                    <a href="javascript:;" class="product_p"><img src="images/product10.png" alt=""></a>
+                    <h3 class="product_h3">
+                        <a href="javascript:;" class="product_a">米家聲波電動牙刷 T500</a>
+                    </h3>
+                    <p class="price">NT$ 995</p>
+                </div>
+            </li>
+            <li>
+                <div class="product_box border_orange">
+                    <a href="javascript:;" class="product_p"><img src="images/product11.png" alt=""></a>
+                    <h3 class="product_h3">
+                        <a href="javascript:;" class="product_a">米家螢幕掛燈</a>
+                    </h3>
+                    <p class="price">NT$ 995</p>
+                </div>
+            </li>
+            <li>
+                <div class="product_box border_green">
+                    <a href="javascript:;" class="product_p"><img src="images/product12.png" alt=""></a>
+                    <h3 class="product_h3">
+                        <a href="javascript:;" class="product_a">小米手錶 超值版</a>
+                    </h3>
+                    <p class="price">NT$ 1595</p>
+                </div>
+            </li>
+            <li>
+                <div class="product_box border_blue">
+                    <a href="javascript:;" class="product_p"><img src="images/product13.png" alt=""></a>
+                    <h3 class="product_h3">
+                        <a href="javascript:;" class="product_a">小米延長線</a>
+                    </h3>
+                    <p class="price">NT$ 295</p>
+                </div>
+            </li>
+            <li>
+                <div class="product_box border_red">
+                    <a href="javascript:;" class="product_p"><img src="images/product14.png" alt=""></a>
+                    <h3 class="product_h3">
+                        <a href="javascript:;" class="product_a">小米藍牙耳機 Earbuds 遊戲版</a>
+                    </h3>
+                    <p class="price">NT$ 545</p>
+                </div>
+            </li>
+            <li>
+                <div class="product_box border_green_blue">
+                    <a href="javascript:;" class="product_p"><img src="images/product15.png" alt=""></a>
+                    <h3 class="product_h3">
+                        <a href="javascript:;" class="product_a">米家水離子吹風機</a>
+                    </h3>
+                    <p class="price">NT$ 995</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!-- 15張商品盒子結束 -->
+    <!-- 熱賣產品排行開始，因為是全背景色，不能用板心
+    故使用一個新的盒子撐開 -->
+    <div class="middle">
+        <!-- best selling start -->
+        <!-- 用hover添加陰影 -->
+        <div class="best_selling w">
+            <h2 class="h2">
+                <span>熱賣產品排行</span>
+            </h2>
+            <ul class="middle_ul">
+                <li><a href="javascript:;"><img src="images/bestselling1.png" alt=""></a>
+                    <h3 class="product_h3_2">
+                        <p class="product_a">小米手環6</p>
+                        <p class="price_2">NT$ 995</p>
+                    </h3>
+                    <i id="i1">1</i>
+                </li>
+                <li><a href="javascript:;"><img src="images/bestselling2.png" alt=""></a>
+                    <h3 class="product_h3_2">
+                        <p class="product_a">小米智慧顯示器 65型</p>
+                        <p class="price_2">NT$ 20999</p>
+                    </h3>
+                    <i id="i2">2</i>
+                </li>
+                <li><a href="javascript:;"><img src="images/bestselling3.png" alt=""></a>
+                    <h3 class="product_h3_2">
+                        <p class="product_a">米家無線吸塵器 mini</p>
+                        <p class="price_2">NT$ 1095</p>
+                    </h3>
+                    <i id="i3">3</i>
+                </li>
+                <li><a href="javascript:;"><img src="images/bestselling4.png" alt=""></a>
+                    <h3 class="product_h3_2">
+                        <p class="product_a">米家智慧空氣循環扇</p>
+                        <p class="price_2">NT$ 1695</p>
+                    </h3>
+                    <i id="i4">4</i>
+                </li>
+                <li id="the_last_bestselling"><a href="javascript:;"><img src="images/bestselling5.png" alt=""></a>
+                    <h3 class="product_h3_2">
+                        <p class="product_a">小米手錶 運動版</p>
+                        <p class="price_2">NT$ 3295</p>
+                    </h3>
+                    <i id="i5">5</i>
+                </li>
+            </ul>
+        </div>
+        <h2 class="h2 w">
+            <span>智慧科技與家庭</span>
+        </h2>
+        <ul class="w middle_ul2">
+            <li><a href="javascript:;"><img src="images/middle1.jpg" alt="" class="first_pic"></a></li>
+            <li><a href="javascript:;"><img src="images/middle7.png" alt=""></a>
+                <h3 class="product_h3_2">
+                    <p class="product_a">米家掃拖機器人 1C</p>
+                    <p class="price_2">NT$ 6995</p>
+                </h3>
+            </li>
+            <li><a href="javascript:;"><img src="images/middle8.png" alt=""></a>
+                <h3 class="product_h3_2">
+                    <p class="product_a">米家掃拖機器人 1C</p>
+                    <p class="price_2">NT$ 6995</p>
+                </h3>
+            </li>
+            <li><a href="javascript:;"><img src="images/middle9.png" alt=""></a>
+                <h3 class="product_h3_2">
+                    <p class="product_a">米家掃拖機器人 1C</p>
+                    <p class="price_2">NT$ 6995</p>
+                </h3>
+            </li>
+            <li class="the_last"><a href="javascript:;"><img src="images/middle10.png" alt=""></a>
+                <h3 class="product_h3_2">
+                    <p class="product_a">米家掃拖機器人 1C</p>
+                    <p class="price_2">NT$ 6995</p>
+                </h3>
+            </li>
+        </ul>
+        <ul class="middle_ul2 w">
+            <li><a href="javascript:;"><img src="images/middle11.jpg" alt="" class="first_pic"></a></li>
+            <li><a href="javascript:;"><img src="images/middle7.png" alt=""></a>
+                <h3 class="product_h3_2">
+                    <p class="product_a">米家掃拖機器人 1C</p>
+                    <p class="price_2">NT$ 6995</p>
+                </h3>
+            </li>
+            <li><a href="javascript:;"><img src="images/middle12.jpg" alt=""></a>
+                <h3 class="product_h3_2">
+                    <p class="product_a">米家掃拖機器人 1C</p>
+                    <p class="price_2">NT$ 6995</p>
+                </h3>
+            </li>
+            <li><a href="javascript:;"><img src="images/middle 13.png" alt=""></a>
+                <h3 class="product_h3_2">
+                    <p class="product_a">米家掃拖機器人 1C</p>
+                    <p class="price_2">NT$ 6995</p>
+                </h3>
+            </li>
+            <li class="the_last"><a href="javascript:;"><img src="images/middle15.png" alt="" width='160px'></a>
+                <h3 class="product_h3_2">
+                    <p class="product_a">米家掃拖機器人 1C</p>
+                    <p class="price_2">NT$ 6995</p>
+                </h3>
+            </li>
+        </ul>
+    </div>
+    <!-- footer_ad start -->
+    <div class="footer_ad w">
+        <div class="footer_1"><a href="javascript:;">
+            <span>免運費</span>
+            <br>
+            <span class="td">全場滿NT$800</span>
+        </a></div>
+        <div class="footer_2"><a href="javascript:;">
+            <span>黑貓宅急便</span>
+            <br>
+            <span class="td"> 服務升級，限時送達</span>
+        </a></div>
+        <div class="footer_3"><a href="javascript:;">
+            <span>企業採購通道</span>
+            <br>
+            <span class="td">採購小米好禮專屬通道</span>
+        </a></div>
+        <!-- 右側圖標 -->
+        <div class="line">
+        </div>
+        <div class="icon">
+            <span>關注我們</span>
+            <a href="javascript:;" class="icon_a"></a>
+            <a href="javascript:;" class="icon_b"></a>
+            <a href="javascript:;" class="icon_c"></a>
+            <a href="javascript:;" class="icon_d"></a>
+        </div>
+    </div>
+    <!-- footer_ad end -->
+    <!-- footer start -->
+    <footer class="footer">
+        <dl class="footer_div">
+            <dt>產品與配件</dt>
+            <dd>熱門商品分類</dd>
+            <dd>全部商品分類</dd>
+            <dd>官方翻新機</dd>
+            <dd>F 碼通道</dd>
+        </dl>
+        <dl class="footer_div">
+            <dt>幫助中心</dt>
+            <dd>購物指南</dd>
+            <dd>付款幫助</dd>
+            <dd>PayPal 使用幫助</dd>
+            <dd>分期付款</dd>
+            <dd>常見 Q&A</dd>
+        </dl>
+        <dl class="footer_div">
+            <dt>客戶支援</dt>
+            <dd>服務條款及細則</dd>
+            <dd>維修站地點</dd>
+            <dd>售後服務政策</dd>
+            <dd>退貨須知</dd>
+            <dd>配送規範</dd>
+            <dd>產品防偽查詢</dd>
+            <dd>使用者指南</dd>
+        </dl>
+        <dl class="footer_div">
+            <dt>產品與配件</dt>
+            <dd>熱門商品分類</dd>
+            <dd>全部商品分類</dd>
+            <dd>官方翻新機</dd>
+            <dd>F 碼通道</dd>
+        </dl>
+        <dl class="footer_div">
+            <dt>幫助中心</dt>
+            <dd>購物指南</dd>
+            <dd>付款幫助</dd>
+            <dd>PayPal 使用幫助</dd>
+            <dd>分期付款</dd>
+            <dd>常見 Q&A</dd>
+        </dl>
+        <div class="footer_box">
+            <h3>02-77255376</h3>
+            <p>服務時間 09:00-18:00 含節假日</p>
+            <button>聯繫線上客服</button>
+        </div>
+    </footer>
+    <div class="bottom">
+        <p>
+            ©2021/9/29-10/1 楊士弘製作
+        </p>
+    </div>
+</body>
+
+</html>
